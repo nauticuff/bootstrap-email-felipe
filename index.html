@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Email</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand d-none d-lg-flex gap-1 align-items-center"
+          href="#"
+          ><i class="bi bi-envelope-open-heart"></i>LoveMail</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex mx-3 col" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <button class="btn fs-4" type="button" aria-label="avatar">
+          <i class="bi bi-person-circle"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- SideMenu Start -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title d-flex align-items-center gap-1"
+          id="offcanvasExampleLabel"
+        >
+          <i class="bi bi-envelope-open-heart"></i>LoveMail
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr />
+      <div class="offcanvas-body p-0">
+        <div class="p-0">
+          <div class="col menu">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action active rounded-0"
+                id="list-home-list"
+                data-bs-toggle="list"
+                href="#list-home"
+                role="tab"
+                aria-controls="list-home"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-inboxes fs-4"></i>
+                  All Inboxes
+                </div>
+                <span class="badge text-black bg-light rounded-pill">99+</span>
+              </a>
+              <hr />
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                href="#list-profile"
+                role="tab"
+                aria-controls="list-profile"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-inbox fs-4"></i>
+                  Primary
+                </div>
+                <span class="badge text-black bg-light rounded-pill">6</span></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                href="#list-profile"
+                role="tab"
+                aria-controls="list-profile"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-people fs-4"></i>
+                  Social
+                </div>
+                <span class="badge text-black bg-light rounded-pill">6</span></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                href="#list-profile"
+                role="tab"
+                aria-controls="list-profile"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-tag fs-4"></i>
+                  Promotions
+                </div>
+                <span class="badge text-black bg-light rounded-pill">6</span></a
+              >
+              <hr />
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action"
+                id="list-messages-list"
+                data-bs-toggle="list"
+                href="#list-messages"
+                role="tab"
+                aria-controls="list-messages"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-star fs-4"></i>
+                  Starred
+                </div>
+                <span class="badge text-black bg-light rounded-pill"
+                  >22</span
+                ></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-clock fs-4"></i>
+                  Snoozed
+                </div>
+                <span class="badge text-black bg-light rounded-pill"></span
+              ></a>
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-bookmark fs-4"></i>
+                  Important
+                </div>
+                <span class="badge text-black bg-light rounded-pill">6</span></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-send fs-4"></i>
+                  Sent
+                </div>
+                <span class="badge text-black bg-light rounded-pill"
+                  >12</span
+                ></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-send-plus fs-4"></i>
+                  Scheduled
+                </div>
+                <span class="badge text-black bg-light rounded-pill"></span
+              ></a>
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-file fs-4"></i>
+                  Drafts
+                </div>
+                <span class="badge text-black bg-light rounded-pill">3</span></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-mailbox fs-4"></i>
+                  All mail
+                </div>
+                <span class="badge text-black bg-light rounded-pill"
+                  >99+</span
+                ></a
+              >
+              <hr />
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-gear fs-4"></i>
+                  Settings
+                </div></a
+              >
+              <a
+                data-bs-dismiss="offcanvas"
+                class="list-group-item list-group-item-action rounded-0"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                href="#list-settings"
+                role="tab"
+                aria-controls="list-settings"
+                ><div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-question-circle fs-4"></i>
+                  Help
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="mainContent" class="d-lg-flex">
+        <div id="desktopSidebar" class="offcanvas-body d-none d-lg-block p-0 desktop-sidebar">
+            <div class="p-0">
+              <div class="col menu">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action active rounded-0"
+                    id="list-home-list"
+                    data-bs-toggle="list"
+                    href="#list-home"
+                    role="tab"
+                    aria-controls="list-home"
+                  >
+                    <div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-inboxes fs-4"></i>
+                      All Inboxes
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill">99+</span>
+                  </a>
+                  <hr />
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action"
+                    id="list-profile-list"
+                    data-bs-toggle="list"
+                    href="#list-profile"
+                    role="tab"
+                    aria-controls="list-profile"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-inbox fs-4"></i>
+                      Primary
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill">6</span></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action"
+                    id="list-profile-list"
+                    data-bs-toggle="list"
+                    href="#list-profile"
+                    role="tab"
+                    aria-controls="list-profile"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-people fs-4"></i>
+                      Social
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill">6</span></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action"
+                    id="list-profile-list"
+                    data-bs-toggle="list"
+                    href="#list-profile"
+                    role="tab"
+                    aria-controls="list-profile"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-tag fs-4"></i>
+                      Promotions
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill">6</span></a
+                  >
+                  <hr />
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action"
+                    id="list-messages-list"
+                    data-bs-toggle="list"
+                    href="#list-messages"
+                    role="tab"
+                    aria-controls="list-messages"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-star fs-4"></i>
+                      Starred
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill"
+                      >22</span
+                    ></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-clock fs-4"></i>
+                      Snoozed
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill"></span
+                  ></a>
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-bookmark fs-4"></i>
+                      Important
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill">6</span></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-send fs-4"></i>
+                      Sent
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill"
+                      >12</span
+                    ></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-send-plus fs-4"></i>
+                      Scheduled
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill"></span
+                  ></a>
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-file fs-4"></i>
+                      Drafts
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill">3</span></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-mailbox fs-4"></i>
+                      All mail
+                    </div>
+                    <span class="badge text-black bg-light rounded-pill"
+                      >99+</span
+                    ></a
+                  >
+                  <hr />
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-gear fs-4"></i>
+                      Settings
+                    </div></a
+                  >
+                  <a
+                    data-bs-dismiss="offcanvas"
+                    class="list-group-item list-group-item-action rounded-0"
+                    id="list-settings-list"
+                    data-bs-toggle="list"
+                    href="#list-settings"
+                    role="tab"
+                    aria-controls="list-settings"
+                    ><div class="d-flex align-items-center gap-4">
+                      <i class="bi bi-question-circle fs-4"></i>
+                      Help
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+      <ul id="emailContainer" class="col-lg-9">
+        <li id="emailOne" class="row py-3 cursor-pointer">
+          <div
+            class="col-1 d-flex justify-content-center align-items-start pt-3 px-0"
+          >
+            <h1 class="senderAvatar">CF</h1>
+          </div>
+          <div class="mobileEmailText row col-10">
+            <h2 class="fw-bold fs-5">Bay Valley Tech</h2>
+            <h3 class="fw-bold">Join us For Field Day!</h3>
+            <h3 class="fw-normal email-content overflow-hidden">
+              It's important to be recharge and have fun. At field day we take
+              the best moments from everyday.
+            </h3>
+          </div>
+          <div
+            class="col-1 d-flex flex-column justify-content-between align-items-end"
+          >
+            <p>15:53</p>
+            <i class="bi bi-star"></i>
+          </div>
+        </li>
+        <li class="row py-3">
+          <div
+            class="col-1 d-flex justify-content-center align-items-start pt-3 px-0"
+          >
+            <h1 class="senderAvatar bg-info">G</h1>
+          </div>
+          <div class="mobileEmailText row col-10">
+            <h2 class="fw-bold fs-5">Google</h2>
+            <h3 class="fw-bold">Join the Google Doodle Contest!</h3>
+            <h3 class="fw-normal email-content overflow-hidden">
+              It is that time of the year where you present your best drawings for a chance and prizes! Submit your drawing by the end of this year to be eligible. You do not have to be the best to make something unique and special.
+            </h3>
+          </div>
+          <div
+            class="col-1 d-flex flex-column justify-content-between align-items-end"
+          >
+            <p>15:53</p>
+            <i class="bi bi-star"></i>
+          </div>
+        </li>
+        <li class="row py-3">
+          <div
+            class="col-1 d-flex justify-content-center align-items-start pt-3 px-0"
+          >
+            <h1 class="senderAvatar bg-secondary">N</h1>
+          </div>
+          <div class="mobileEmailText row col-10">
+            <h2 class="fw-bold fs-5">NASA</h2>
+            <h3 class="fw-bold">To Space, Beyond, Farther than any have Gone</h3>
+            <h3 class="fw-normal email-content overflow-hidden">
+              The NASA Space Program has just opened enrollment for the 2024 cohort. If you would like to make your dreams a realitya and see Earth from way above this is your opportunity. It is a very competetive program so put your best foot forward.
+            </h3>
+          </div>
+          <div
+            class="col-1 d-flex flex-column justify-content-between align-items-end"
+          >
+            <p>15:53</p>
+            <i class="bi bi-star"></i>
+          </div>
+        </li>
+        <button
+          class="btn btn-primary shadow justify-content-center gap-1 position-fixed compose-btn"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="bi bi-pencil"></i>
+          Compose
+        </button>
+      </ul>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="email-input mb-3">
+                To: <input class="form-control" />
+              </div>
+              <div class="email-input mb-4">
+                Subject: <input class="form-control" />
+              </div>
+              <textarea class="form-control compose-text"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
